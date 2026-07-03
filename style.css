@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 * {
   margin: 0px;
   padding: 0px;
@@ -364,3 +365,281 @@ select{
     left:40%;
     width:5vw;
 }
+=======
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+html,
+body {
+ min-height: 100%;
+  width: 100%;
+  
+}
+.body{
+    background-color: black;
+    color:grey
+}
+
+main{
+   
+  
+    min-height:100%;
+    width:100%;
+   background-color: rgba(0, 0, 0, 0.055);
+
+
+}
+.card{
+   
+    background-color:white;
+    height:50%;
+    width:30%;
+    gap:1rem;
+     left:32%;
+    top:25%;
+      position: relative;
+      border-radius:1rem;
+}
+  
+.card1{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:1rem;
+    padding:1rem;
+}
+.card2{
+    display:flex;
+    flex-direction: column;
+    padding:1.2rem;
+    
+ 
+}
+input{
+    height:2vw;
+    width:27vw;
+    border-radius:0.5rem;
+    border:2px solid rgba(0, 0, 0, 0.253);
+    padding:1.3rem;
+
+
+}
+
+label{
+    font-size:1.2rem;
+}
+
+.column{
+    display:flex;
+    padding:1rem;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    
+
+}
+.para2{
+color: blue;
+
+}
+.btn{
+    background-color:rgb(0, 55, 255);
+    color:white;
+    padding:0.5rem;
+    margin-top:5%;
+    border-radius:0.7rem;
+    font-size:1.1rem;
+}
+
+.btn1{
+    background-color:rgb(24, 193, 24);
+    color:white;
+    padding:0.5rem;
+    margin-top:5%;
+    border-radius:0.7rem;
+    font-size:1.1rem;
+}
+
+
+.nav{
+    display:flex;
+    align-items:center;
+    justify-content: flex-end;
+    gap:3rem;
+    padding:2rem;
+    background-color:white;
+    height:10%;
+}
+
+.logout{
+    padding:0.7rem;
+    font-size:1rem;
+    border-radius:1rem;
+    width:8%;
+    
+}
+.fintrack{
+    height:100vw;
+    width:20%;
+    background-color:white;
+    position:absolute;
+    border:2px solid rgba(0, 0, 0, 0.555);
+    
+}
+
+.track {
+    padding:2rem;
+}
+.dash{
+    padding:2rem;
+    display:flex;
+    flex-direction: column;
+    gap:2rem;
+
+
+
+}
+
+.dash button{
+    padding:0.5rem;
+    font-size:1rem;
+    border:none;
+    background-color:palevioletred;
+
+}
+.dash p{
+    padding:0.5rem;
+    font-size:1.4rem;
+    text-align: center;
+
+}
+.section1{
+    position: absolute;
+    left:25%;
+}
+.heading h1{
+    padding-left:1rem;
+        padding-top:1rem;
+}
+.heading p{
+    padding:1rem;
+}
+.cards{
+    display:flex;
+    align-items: center;
+    justify-content:space-evenly;
+    height:15vw;
+    width:70vw;
+}
+
+.cardper{
+    background-color:rgba(0, 0, 0, 0.274);
+    border-radius: 1rem;
+    height:13vw;
+    width:13vw;
+    font-size:1.1rem;
+    color:black;
+    padding:1rem;
+    
+}
+.image img{
+    object-fit: cover;
+    height:30vw;
+    width:40vw;
+    padding:2rem;
+}
+.chart{
+    display:flex;
+    gap:3rem;
+    
+}
+#padding{
+margin:2rem;
+
+}
+.dark{
+    padding:1rem;
+       border-radius:1rem;
+       
+}
+
+.black{
+    background-color: black;
+
+}
+.reset{
+        padding:1rem;
+        font-size:1.1rem;
+        background-color:rgba(249, 176, 176, 0.943);
+        color:black;
+        border-radius:1rem;
+}
+.alltransaction{
+    height:15vw;
+    width:70vw;
+    background-color:white;
+    border-radius:1rem;
+}
+.category{
+    display:flex;
+    gap:3rem;
+    padding:1rem;
+
+
+}
+.input{
+    background-color:white;
+    width:30%;
+    display:flex;
+    border:2px solid black;
+}
+.remove{
+    border:none;
+    outline:none
+}
+select{
+    outline:none;
+        border:none;
+}
+.footer{
+    display:flex;
+    align-items: center;
+    justify-content:space-evenly;
+    color:grey;
+    padding:1rem;
+    font-size:1.2rem;
+}
+.side{
+    padding:2rem;
+}
+.amount{
+    display:flex;
+    gap:3rem;
+}
+.adding{
+    background-color:white;
+
+    
+
+}
+.save{
+    background-color:black;
+    color:white;
+    padding:1rem;
+    width:30%;
+}
+
+.expenses{
+    padding:1rem;
+    background-color:red
+
+}
+.income{
+    padding:1rem;
+    background-color:rgb(68, 219, 68);
+    
+}
+>>>>>>> 35bdc2e678b6658c4c8d5431c5ff0e721c13e9f5
