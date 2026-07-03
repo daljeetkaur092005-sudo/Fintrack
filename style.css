@@ -114,8 +114,8 @@ color: blue;
     justify-content: flex-end;
     gap:3rem;
     padding:2rem;
-    background-color:orange;
     height:10%;
+    border:2px solid black;
 
 }
 
@@ -131,15 +131,13 @@ color: blue;
     width:20%;
     background-color:white;
     border:2px solid rgba(0, 0, 0, 0.555);
-    background-color: blueviolet;
+    
     position:absolute;
     
    
     
 }
-.track{ background-color: blue;
 
-}
 
 .dash{
     padding:2rem;
@@ -225,9 +223,9 @@ margin:2rem;
 .alltransaction{
     height:30vw;
     width:50vw;
-    background-color:white;
     border-radius:1rem;
-    background-color: aqua;
+    background-color:rgba(0, 0, 0, 0.641);
+    color:white;
     position: relative;
     left:10%;
 
@@ -250,10 +248,10 @@ margin:2rem;
     display:none;
 }
 .input{
-    background-color:white;
+    background-color:black;
     width:30%;
     display:flex;
-    border:2px solid black;
+    border:2px solid rgba(255, 255, 255, 0.735);
 }
 .remove{
     border:none;
@@ -284,7 +282,7 @@ select{
     position: absolute;
     left:20%;
     height:50%;
-    width:60%;
+    width:70%;
     display:none;
 
     
