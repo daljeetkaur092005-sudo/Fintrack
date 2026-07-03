@@ -1,6 +1,8 @@
 
+
 let select1=document.querySelector("#select1")
 let select2=document.querySelector(".btn")
+let sel2=document.querySelector("#select2")
 let pages=document.querySelector(".page")
 let div=document.querySelector(".parent")
 let div2=document.querySelector(".parent1")
@@ -33,6 +35,14 @@ let amount=document.querySelector(".amounting")
 select1.addEventListener('click',()=>{
   div2.style.display="inline"
    div.style.display="none"
+   
+})
+
+
+sel2.addEventListener('click',()=>{
+  div2.style.display="none"
+   div.style.display="inline"
+   pages.style.display="none"
    
 })
 

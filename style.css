@@ -1,3 +1,4 @@
+
 * {
   margin: 0px;
   padding: 0px;
@@ -57,7 +58,7 @@ main{
 
 
 .page{
-    display:block;
+    display:none;
      position: relative;
     
 }
