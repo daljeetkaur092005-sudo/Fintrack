@@ -46,36 +46,53 @@ sel2.addEventListener('click',()=>{
    
 })
 
+
+
+
 button2.addEventListener('click',()=>{
   user1=use.value
   paskey1=word.value
-  localStorage.setItem("username1",user1)
-  localStorage.setItem("password1",paskey1)   
+  localStorage.setItem("username1",JSON.stringify(user1))
+  localStorage.setItem("password1",JSON.stringify(paskey1))
 })
 
 
 button1.addEventListener('click',()=>{
     user=username.value
     paskey=password.value
-       localStorage.setItem("password",paskey)
-    localStorage.setItem("username",user)
+  
+       localStorage.setItem("password",JSON.stringify(paskey))
+    localStorage.setItem("username",JSON.stringify(user))
 
- let getname=localStorage.getItem("username")
- let getpass=localStorage.getItem("password")
+ let getname=JSON.parse(localStorage.getItem("username"))
+ let getpass=JSON.parse(localStorage.getItem("password"))
     
-let getuser=localStorage.getItem("username1")
-let getpassword=localStorage.getItem("password1") 
-
-if(getname===getuser && getpassword===getpass){
-alert("you are login in")}
+let getuser=JSON.parse(localStorage.getItem("username1"))
+let getpassword=JSON.parse(localStorage.getItem("password1"))
 
 
+if(username.value===use.value && password.value===word.value){
+  alert("you are login in")
+    pages.style.display="inline"
+      div.style.display="none"
+       div2.style.display="none"
+
+}
 else{
-  alert("Again typed")
+    alert("you are not  login in")
+   pages.style.display="none"
 }
 
-
 })
+
+
+
+
+
+
+
+
+
 
 // open fintrack
 
@@ -101,31 +118,50 @@ adding.addEventListener('click',()=>{
 last.style.display="inline"
 })
 
+
+ let invest=document.querySelector(".invest")
+
+
+
+
 Save.addEventListener('click',()=>{
 last.style.display="none"
-
-
-
-
-
-
-let h3=document.querySelector(".head1")
- if( income.value===Expenses){
-   newm=amount.value
-
-h3.textContent="$"+newm
-h3.append(newm)
-
- }
+update(invest.value,amount.value)
+amount.value=""
+invest.value=""
+count++
 })
 
 
 
+let balance=0
+let expense=0
+let newincome=0
+let count=0
+ let update=(type,amount,count)=>{
+ let value=Number(amount)
+let h1=document.querySelector(".head-one")
+let h2=document.querySelector(".head-two")
+let h3=document.querySelector(".head-three")
+ let headfour=document.querySelector(".head-four")
+if(type==="income"){
+  newincome+=value
+  balance+=value
+  
+  h1.textContent=balance
+  h3.textContent=value
+}
 
+else if(type==="expense"){
 
+balance-=value
 
-
-
+  h2.textContent=value
+   h1.textContent=balance
+}
+count=count+1
+headfour.textContent=count
+}
 
 
 
