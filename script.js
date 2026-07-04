@@ -1,8 +1,7 @@
 
 
 let select1=document.querySelector("#select1")
-let select2=document.querySelector(".btn")
-let sel2=document.querySelector("#select2")
+let select2=document.querySelector("#select2")
 let pages=document.querySelector(".page")
 let div=document.querySelector(".parent")
 let div2=document.querySelector(".parent1")
@@ -39,10 +38,12 @@ select1.addEventListener('click',()=>{
 })
 
 
-sel2.addEventListener('click',()=>{
+select2.addEventListener('click',()=>{
   div2.style.display="none"
    div.style.display="inline"
    pages.style.display="none"
+  
+
    
 })
 
@@ -50,17 +51,24 @@ sel2.addEventListener('click',()=>{
 
 
 button2.addEventListener('click',()=>{
+  
   user1=use.value
   paskey1=word.value
   localStorage.setItem("username1",JSON.stringify(user1))
   localStorage.setItem("password1",JSON.stringify(paskey1))
+   div2.style.display="none"
+   div.style.display="block"
+   pages.style.display="none"
 })
 
 
 button1.addEventListener('click',()=>{
     user=username.value
     paskey=password.value
+
   
+let getdata=document.querySelector(".anchor")
+getdata.textContent=username.value
        localStorage.setItem("password",JSON.stringify(paskey))
     localStorage.setItem("username",JSON.stringify(user))
 
@@ -71,9 +79,9 @@ let getuser=JSON.parse(localStorage.getItem("username1"))
 let getpassword=JSON.parse(localStorage.getItem("password1"))
 
 
-if(username.value===use.value && password.value===word.value){
+if(user===getuser && paskey===getpassword){
   alert("you are login in")
-    pages.style.display="inline"
+    pages.style.display="block"
       div.style.display="none"
        div2.style.display="none"
 
@@ -89,7 +97,13 @@ else{
 
 
 
-
+let logout=document.querySelector(".logout")
+logout.addEventListener('click',()=>{
+   pages.style.display="none"
+   alert("you are logout")
+   div.style.display="inline"
+   
+})
 
 
 
@@ -97,8 +111,6 @@ else{
 // open fintrack
 
 select2.addEventListener('click',()=>{
-     console.log("hello");
-   pages.style.display="inline"
    div.style.display="none"
     div2.style.display="none"
 
@@ -112,11 +124,69 @@ select2.addEventListener('click',()=>{
 
 
 
+ 
+
 
 
 adding.addEventListener('click',()=>{
 last.style.display="inline"
 })
+
+
+
+let setting=document.querySelector(".setting")
+let track=document.querySelector(".track")
+let showsetting=document.querySelector(".showsetting")
+setting.addEventListener('click',()=>{
+showsetting.style.display="block"
+section.style.display="none"
+
+})
+
+
+let savechanges=document.querySelector(".savechanges")
+
+savechanges.addEventListener('click',()=>{
+  showsetting.style.display="none"
+  section.style.display="block"
+
+})
+
+
+let fullname=document.querySelector(".fullname")
+let anchor=document.querySelector(".anchor")
+fullname.value=username.value
+
+
+
+
+
+
+
+let mytodo=document.querySelector(".mytodo")
+let inputval=document.querySelector(".lastinp")
+if(inputval.value==="expense"|| inputval.value==="income")
+{
+  mytodo.innerHTML+=`<div class="todo">
+<div class="mylist">
+<h1>hello</h1>
+</div>
+</div>`
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
  let invest=document.querySelector(".invest")
@@ -138,7 +208,7 @@ let balance=0
 let expense=0
 let newincome=0
 let count=0
- let update=(type,amount,count)=>{
+ let update=(type,amount)=>{
  let value=Number(amount)
 let h1=document.querySelector(".head-one")
 let h2=document.querySelector(".head-two")
@@ -162,7 +232,6 @@ balance-=value
 count=count+1
 headfour.textContent=count
 }
-
 
 
 

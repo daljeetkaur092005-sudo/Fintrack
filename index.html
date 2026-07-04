@@ -86,16 +86,50 @@
 
 <div class="dash">
 <button>Dashboard</button>
-<p>Setting</p></div>
+<p class="setting">Setting</p>
+</div>
 
 <button class="add">Add Transaction</button>
 </div>
 
   
 <div class="nav">
-    <a>${user}</a>
+    <h1 class="anchor"></h1>
     <button class="logout">Logout</button>
 </div>
+
+
+<div class="showsetting">
+<h1>Settings</h1>
+<p>Manage your account profile and app formatting.</p>
+<div class="profile">
+<h1>Profile Details</h1><br>
+<label>Full name</label><br><br>
+<input type="name" class="fullname"><br>
+<label>Primary Currency</label>
+<select><option>USD($)</option>
+  <option>EUR</option>
+  <option>GBP</option>
+  <option>INR</option>
+  <option>JPY</option>
+  </select>
+  <button class="savechanges">Save Changes</button>
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <div class="section1">
@@ -138,11 +172,12 @@
 <div class="side">
 <h1>All Transactions</h1>
 <div class="category">
-<input type="search" placeholder="Search transactions..."></div>
+<input type="search" placeholder="Search transactions... " class="search"></div>
+  <input type="name" placeholder="All types" class="lastinp">
 
-<div class="input">
-  <input type="name" placeholder="All types" class="remove">
 
+
+<div class="mytodo">
 
 </div>
 
@@ -163,7 +198,7 @@
 <div class="last">
 <h1>Add Transaction</h1><br><br>
 <label for="balance">Type</label>
-<input type="text"   class="invest"> 
+<input type="text"  placeholder=" type income or expense" class="invest"> <br><br>
 
 
 
