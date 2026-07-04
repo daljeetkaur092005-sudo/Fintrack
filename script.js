@@ -163,15 +163,73 @@ fullname.value=username.value
 
 
 
+
+
+let  dark=document.querySelector(".dark")
+
+let  cards=document.querySelector(".cards")
+
+let  light=document.querySelector(".light")
+dark.addEventListener('click',()=>{
+ pages.classList.toggle("light")
+  section.classList.toggle("light")
+cards.style.backgroundColor="white"
+cards.style.Color="black"
+
+ 
+})
+
+
+const ctx=document.querySelector("#mychart")
+new Chart(ctx,{
+  type:"bar",
+  data:{
+    labels:[
+      "newincome","expenses"
+
+    ],
+      datasets: [{
+            label: "values",
+            data: [5000,7000],
+            backgroundColor:[
+      "green","red"
+            ]
+        }]
+
+
+
+
+  },
+  options:{
+    responsive:true,
+    scales:{
+      y:{
+        beginAtZero:true
+      }
+    }
+  }
+});
+
+
+
+
+
+
+
+
+let show=document.querySelector(".show")
+show.addEventListener('click',()=>{
 let mytodo=document.querySelector(".mytodo")
 let inputval=document.querySelector(".lastinp")
 if(inputval.value==="expense"|| inputval.value==="income")
 {
-  mytodo.innerHTML+=`<div class="todo">
+  mytodo.innerHTML+=`
 <div class="mylist">
-<h1>hello</h1>
+<h1>your balance is:${balance}</h1>
+<button class="delete">Delete</button>
 </div>
-</div>`
+
+`
 }
 
 
@@ -181,6 +239,12 @@ if(inputval.value==="expense"|| inputval.value==="income")
 
 
 
+let del=document.querySelector(".delete")
+let todo=document.querySelector(".todo")
+del.addEventListener('click',()=>{
+del.closest(".mylist").remove()
+})
+})
 
 
 

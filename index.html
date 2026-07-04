@@ -147,10 +147,10 @@
 
 
 <div class="chart">
-<div class="image">
-  <img src="https://www.indiabix.com/_files/images/data-interpretation/bar-charts/15-1-10-1.png"
->
-</div>
+<canvas  id="mychart" class="chart-div"></canvas>
+
+
+
 <div class="prefer">
 <div class="card1" id="padding"><h3>Preference</h3>
 <div class="dark">
@@ -165,7 +165,7 @@
 </div>
 
 </div>
-
+</div>
 
 <div class="alltransaction">
 
@@ -173,7 +173,9 @@
 <h1>All Transactions</h1>
 <div class="category">
 <input type="search" placeholder="Search transactions... " class="search"></div>
-  <input type="name" placeholder="All types" class="lastinp">
+  <input type="name" placeholder="type income or expense" class="lastinp">
+  <button class="show">Show</button>
+  
 
 
 
@@ -198,7 +200,7 @@
 <div class="last">
 <h1>Add Transaction</h1><br><br>
 <label for="balance">Type</label>
-<input type="text"  placeholder=" type income or expense" class="invest"> <br><br>
+<input type="text"  placeholder="income or expense" class="invest"> <br><br>
 
 
 
@@ -234,6 +236,7 @@
 </div>
 
 </main>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
